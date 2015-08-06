@@ -1,0 +1,202 @@
+
+bb.js,197
+var main = function() {main2,1
+           //  swing:{frames:_.range(0,3),rate:1/19}swing14,415
+           var img0 = new T.Sprite({asset:"t0.jpg",x:100,y:0, scale:{x:0.3,y:0.3}});scale17,487
+
+sage_test0.js,197
+var main = function() {main2,1
+           //  swing:{frames:_.range(0,3),rate:1/19}swing16,442
+           var img0 = new T.Sprite({asset:"t0.jpg",x:100,y:0, scale:{x:0.3,y:0.3}});scale19,514
+
+input_test0.html,0
+
+bb.html,0
+
+input_test0.js,197
+var main = function() {main2,1
+           //  swing:{frames:_.range(0,3),rate:1/19}swing16,442
+           var img0 = new T.Sprite({asset:"t0.jpg",x:100,y:0, scale:{x:0.3,y:0.3}});scale19,514
+
+stage_test0.html,0
+
+js/tina/tina.input.js,602
+Tina.Input = function(T) {Tina.Input1,0
+  var KEY_NAMES = {LEFT:37, RIGHT:39, SPACE:32,KEY_NAMES2,27
+  var DEFAULT_KEYS = {DEFAULT_KEYS7,168
+  T.inputs = {};T.inputs16,306
+  T.InputSystem = T.Evented.extend({T.InputSystem18,324
+    keys: {},keys19,361
+    bindKey: function(key,name) {bindKey22,404
+    keyboardControls: function(keys) {keyboardControls26,496
+    enableKeyboard: function() {enableKeyboard34,695
+      T.cvs.keydown = function(onkeydown) {T.cvs.keydown39,831
+      T.cvs.keyup = function(onkeyup) {T.cvs.keyup43,945
+  T.controls = function() {T.controls77,1826
+
+js/tina/tina.sprites.js,815
+Tina.Sprites = function(T) {Tina.Sprites1,0
+  T.SpriteSheet = Class.extend({T.SpriteSheet3,30
+    init:function(name,asset,ops) {init4,63
+    frameX: function(frame) {frameX20,436
+    frameY: function(frame) {frameY24,535
+    render: function(ctx,x,y,frame,dw,dh,asset) {render27,643
+  T.sheets = {};T.sheets40,1032
+  T.sheet = function(name,asset,ops) {T.sheet42,1050
+  T.compileSheets = function(imageAsset,spriteDataAsset) {T.compileSheets49,1206
+  T.Sprite = T.GameObject.extend({T.Sprite56,1412
+    init: function(ops) {init57,1447
+        offset: {x:0,y:0},offset66,1599
+        scale: {x:1,y:1},scale68,1647
+    getAsset: function() {getAsset88,2151
+    getSheet: function() {getSheet92,2223
+    render: function(ctx) {render96,2292
+    update: function(dt) {update125,3191
+
+js/tina/tina.scenes.js,2562
+Tina.Scenes = function(T) {Tina.Scenes1,0
+  T.scenes = {};T.scenes2,28
+  T.stages = {};T.stages3,45
+  T.Scene = Class.extend({T.Scene5,63
+    init: function(sceneFunc,ops) {init6,90
+  T.scene = function(name,sceneObj) {T.scene13,237
+  T.overlap = function(o1,o2) {T.overlap18,356
+  T.Stage = T.GameObject.extend({T.Stage23,523
+    defaults: {defaults24,557
+    init: function(scene) {init27,598
+      this.items = [];this.items29,652
+      this.index = {};this.index30,675
+      this.removeList = [];this.removeList31,698
+        this.options.sort = function(a,b) { return a.z - b.z; };this.options.sort38,939
+    each: function(callback) {each42,1020
+    eachInvoke: function(funcName) {eachInvoke48,1187
+    detect: function(func) {detect56,1395
+    add: function(itm) {add65,1633
+    remove: function(itm) {remove76,1856
+    forceRemove: function(itm) {forceRemove80,1925
+    pause: function() {pause91,2209
+    unpause: function() {unpause95,2267
+    _hitTest: function(obj,type) {_hitTest99,2328
+    collide: function(obj,type) {collide107,2527
+    update: function(dt) {update111,2619
+    render: function(ctx) {render124,2974
+  T.stage = function(num) {T.stage139,3308
+  T.stageScene = function(scene,num,stageClass) {T.stageScene144,3418
+  T.stageGameLoop = function(dt) {T.stageGameLoop161,3749
+  T.clearStage = function(num) {T.clearStage176,4087
+  T.clearStages = function() {T.clearStages183,4215
+    added: function() {added196,4464
+        var events = ["mousedown","mouseup","mousemove"];events199,4544
+        var events = ["mousedown","mouseup","mousemove"];events199,4544
+          events = ["touchstart","touchend","touchmove","touchcancel"];events201,4628
+          events = ["touchstart","touchend","touchmove","touchcancel"];events201,4628
+    extend: {extend207,4852
+      containsPoint: function(item,point) {containsPoint208,4866
+    inputDispatchHandler: function(e) {inputDispatchHandler212,4984
+      var event = "null";event214,5048
+        event = "down";event216,5108
+        event = "up";event219,5217
+        event = "move";event222,5326
+        event = "down";event225,5437
+        event = "up";event228,5589
+        event = "move";event231,5715
+    getItemsAt: function(x,y) {getItemsAt256,6483
+    containsPoint: function(item,point) {containsPoint261,6652
+    getInputPoint: function(e,element) {getInputPoint266,6896
+      var point = {x: (e.pageX || e.clientX + document.body.scrollLeft) - element.offsetLeft,point267,6937
+
+js/tina/tina.js,5327
+Number.prototype.map = function(istart, istop, ostart, ostop) {Number.prototype.map4,110
+Number.prototype.limit = function(min, max) {Number.prototype.limit8,253
+Number.prototype.round = function(precision) {Number.prototype.round12,348
+Number.prototype.toInt = function() {Number.prototype.toInt17,494
+Number.prototype.toRad = function() {Number.prototype.toRad21,557
+Number.prototype.toDeg = function() {Number.prototype.toDeg25,632
+Array.prototype.erase = function(item) {Array.prototype.erase29,707
+Array.prototype.random = function() {Array.prototype.random38,862
+Array.prototype.shuffle = function() {Array.prototype.shuffle42,960
+  window.$ = function(selector)  {window.$54,1272
+  window.$new = function(name) {window.$new60,1452
+  window._ = {window._64,1532
+    extend:  function(dest,source) {extend66,1548
+    clone: function(obj) {clone75,1745
+    defaults: function(dest,source) {defaults79,1811
+    modify: function(dest,source) {modify89,2032
+    has: function(obj,key) {has100,2255
+    isString:  function(obj) {isString104,2347
+    isNumber: function(obj) {isNumber108,2424
+    isFunction: function(obj) {isFunction112,2534
+    isObject: function(obj) {isObject116,2648
+    isArray: function(obj) {isArray120,2758
+    isUndefined: function(obj) {isUndefined124,2866
+    popProperty: function(obj,property) {popProperty128,2936
+    each: function(obj,iterator,context) {each134,3063
+    invoke: function(arr,property,arg1,arg2) {invoke149,3483
+    detect: function(obj,iterator,context,arg1,arg2) {detect156,3668
+    filter: function(obj,iterator,context,arg1,arg2) {filter174,4214
+      var result=[];result175,4269
+    map: function(obj, iterator, context) {map193,4783
+      var results = [];results194,4827
+    uniq: function(arr) {uniq204,5196
+      var output = [];output206,5254
+      var keys = [];keys220,5600
+    range: function(start,stop,step) {range225,5726
+    uniqueId: function() {uniqueId242,6094
+  this.Class = function(){};this.Class261,6593
+  Class.extend = function(prop) {Class.extend264,6679
+var Tina = function(ops) {Tina317,8293
+  var T = {};T318,8320
+  T.options = {T.options320,8335
+    audioSupported: ["mp3","ogg"],audioSupported324,8425
+  T._normalizeArg = function(arg) {T._normalizeArg330,8520
+      arg = [arg];arg335,8663
+  T.extend = function(obj) {T.extend340,8710
+  T.requires = function(mod) {T.requires345,8780
+  T.gameLoop = function(callback) {T.gameLoop353,8920
+    T.gameLoopCallbackWrapper = function() {T.gameLoopCallbackWrapper355,9003
+  T.pause = function() {T.pause366,9369
+  T.unpause = function() {T.unpause373,9485
+  T.Evented = Class.extend({T.Evented380,9663
+    on: function(event,target,callback) {on381,9692
+        if (!target._events) {target._events = [];}target._events397,10163
+    emit: function(event,data) {emit401,10282
+    hasListener:function(event,target,callback) {hasListener409,10569
+    removeListener: function(event,target,callback) {removeListener428,11068
+    removeAllListeners: function() {removeAllListeners447,11610
+  T.components = {};T.components459,11916
+  T.c = function(name,component) {T.c461,11938
+  T.Component = T.Evented.extend({T.Component466,12062
+    init: function(base) {init467,12097
+    destroy: function() {destroy474,12317
+  T.GameObject = T.Evented.extend({T.GameObject494,12800
+    hasCom: function(component) {hasCom495,12836
+    merge: function(components) {merge499,12923
+      if(!this.activeComponents) { this.activeComponents = []; }this.activeComponents502,13006
+    purge: function(components) {purge514,13360
+    destroy: function() {destroy527,13696
+  T.setup = function(id,options) {T.setup539,13951
+    var touchDevice = 'ontouchstart' in document;touchDevice540,13986
+      id =  "tina_canvas";id549,14226
+    T.cvs.style.display = "block";T.cvs.style.display559,14454
+  T.clear = function(color) {T.clear592,15591
+  T.assetTypes = {T.assetTypes599,15792
+  T._fileExtension = function(filename) {T._fileExtension606,15949
+  T._removeExtension = function(filename) {T._removeExtension612,16109
+  T.assetType = function(asset) {T.assetType616,16209
+  T.loadAssetImage = function(key,src,callback,errorCallback) {T.loadAssetImage621,16351
+    img.onload  = function() {callback(key,img);};img.onload623,16442
+  T.audioMimeTypes = { mp3: "audio/mpeg", T.audioMimeTypes628,16575
+                       ogg: "audio/ogg; codecs=\"vorbis\"",codecs629,16618
+  T.loadAssetAudio = function(key,src,callback,errorCallback) {T.loadAssetAudio633,16763
+  T.loadAssetOther = function(key,src,callback,errorCallback) {T.loadAssetOther666,17599
+    request.onreadystatechange = function() {request.onreadystatechange672,17804
+  T.assets = {};T.assets690,18274
+  T.getAsset = function(name) {T.getAsset692,18293
+T.load = function(assets,callback,options) {T.load699,18437
+    var assetObj = {};assetObj700,18482
+    if(!options) {options = {};}options701,18505
+        errorCallback = function(itm) {errorCallback706,18625
+    var loadedCallback = function(key,obj) {loadedCallback729,19215
+  T.preloads = [];T.preloads759,20052
+  T.preload = function(arg,options) {T.preload761,20072
+      T.preloads = [];T.preloads764,20184
