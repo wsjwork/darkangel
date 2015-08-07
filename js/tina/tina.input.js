@@ -3,7 +3,7 @@ Tina.Input = function(T) {
                    UP:38, DOWN:40,
                    Z:90, X:88,
                    C:67,
-                    W:87,A:65,S:83,D:68,0:48,ENT:13};
+                   H:72,F:70, W:87,A:65,S:83,D:68,0:48,ENT:13};
 
   var DEFAULT_KEYS = {
     LEFT:'left', RIGHT:'right',
@@ -16,6 +16,8 @@ Tina.Input = function(T) {
     A:'a',
     S:'s',
     D:'d',
+    F:'f',
+    H:'h',
     ENT:'ent'
   };
 

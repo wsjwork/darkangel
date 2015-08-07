@@ -24,14 +24,14 @@ var main = function() {
 
         var result = false;
         if(pl_y>foe_y&&pl_y<foe_yy||pl_yy>foe_y&&pl_yy<foe_yy){
-            //console.log("yºÏ¸ñ");
+            //console.log("yåˆæ ¼");
             if(pl_x>foe_x&&pl_x<foe_xx||pl_xx>foe_x&&pl_xx<foe_xx)
             {
-                //console.log("xºÏ¸ñ");
+                //console.log("xåˆæ ¼");
                 result = true;
             }
         }
-        //console.log("µ÷ÓÃÁË·½·¨£º"+"½á¹ûÎª£º"+result);
+        //console.log("è°ƒç”¨äº†æ–¹æ³•ï¼š"+"ç»“æžœä¸ºï¼š"+result);
         return result;
     };
 
@@ -149,21 +149,21 @@ var main = function() {
         update: function(ops) {
             this.x += this.speed;
             console.log("x="+this.x+"y="+this.y);
-            //µÃµ½ËùÓÐµÄÔªËØ
+            //å¾—åˆ°æ‰€æœ‰çš„å…ƒç´ 
             for (var i = 0 ;i< this.parent.items.length ; i++){
                 var item = this.parent.items[i];
-                //Èç¹ûÎªµÐÈË£¬¾Í»ñÈ¡µÐÈËµÄ×ø±ê
+                //å¦‚æžœä¸ºæ•Œäººï¼Œå°±èŽ·å–æ•Œäººçš„åæ ‡
                 if(item instanceof testrole||item instanceof testrole1||item instanceof Character){
                     console.log("xx="+this.parent.items[i].x+"yy="+this.parent.items[i].y);
                     var item_x = parseInt(this.parent.items[i].x);
                     var item_y = parseInt(this.parent.items[i].y);
-                    //console.log("xx="+item_x+"yy="+item_y+"²âÊÔ"+(item_y-30));
-                    //½øÐÐ»÷É±ÅÐ¶¨
+                    //console.log("xx="+item_x+"yy="+item_y+"æµ‹è¯•"+(item_y-30));
+                    //è¿›è¡Œå‡»æ€åˆ¤å®š
                     if(kill((this.x-3),(this.y-1),(this.x+3),(this.y+1),(item_x-23),(item_y-44),(item_x+23),item_y)){
-                        //console.log("ÒÆ³ý");
-                        //ÅÐ¶¨³É¹¦¾ÍÁ¢¼´ÒÆ³ýÄ¿±ê
+                        //console.log("ç§»é™¤");
+                        //åˆ¤å®šæˆåŠŸå°±ç«‹å³ç§»é™¤ç›®æ ‡
                         this.parent.remove(this.parent.items[i]);
-                        //ÅÐ¶¨³É¹¦¾ÍÁ¢¼´ÒÆ³ý¸Ã×Óµ¯
+                        //åˆ¤å®šæˆåŠŸå°±ç«‹å³ç§»é™¤è¯¥å­å¼¹
                         this.parent.remove(this);
                     }
                 }

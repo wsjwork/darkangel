@@ -4,8 +4,8 @@ var info_screen = {w:1280, h:720};
 // var info_screen = {w:2446, h:1376};
 var info_screen0 = {w:window.innerWidth, h:window.innerHeight};
 
-var sc_x = info_screen0.w / info_screen.w;
-var sc_y = info_screen0.h / info_screen.h;
+var sc_w = info_screen0.w / info_screen.w;
+var sc_h = info_screen0.h / info_screen.h;
 var score = 0;
 
 
@@ -21,7 +21,7 @@ var main = function() {
       .requires("Input,Sprites,Scenes,Text,Entities")
       .setup("canvas",{width:info_screen0.w,height:info_screen0.h,
         pixelRatio: pixelRatio,
-        scale:{x:sc_x,y:sc_y}
+        scale:{x:sc_w,y:sc_h}
       })
       .controls();
   /**
@@ -609,9 +609,9 @@ var main = function() {
       x: 300,
       y: 300,
       z: 300,
-      w: 24,
-      h: 24,
-      center:{x:10,y:24}
+      w: 72,
+      h: 66,
+      center:{x:36,y:58}
     });
 
     player.setAnimSheet('sheet_p0','p0');
@@ -678,13 +678,13 @@ var main = function() {
   T.load(['k0.png',"k0.json",
         "testimg1.png", "testimg2.png","testimg3.png","test0.json","test1.json",
         "bg0.jpg","bg1.jpg","bg2.jpg","bg3.jpg","bg_over.jpg",
-        "p0.png","zombie.png","buterfly.png",
+        "p11.png","zombie.png","buterfly.png",
         "bullet.png",],
       function() {
         T.compileSheets("k0.png","k0.json");
         T.compileSheets("buterfly.png","test0.json");
         T.compileSheets("zombie.png","test1.json");
-        T.sheet("sheet_p0","p0.png",{tw:16,th:16});
+        T.sheet("sheet_p0","p11.png",{tw:72,th:66});
         T.sheet("sheet_zombie0","zombie.png",{tw:16,th:16});
 
         _.each(
@@ -696,7 +696,7 @@ var main = function() {
             }],
               ["p0",{
                 idle: {frames:[0],rate:1},
-                run:  {frames:_.range(0,6), rate:1/7},
+                run:  {frames:_.range(1,6), rate:1/7},
                 jump: {frames:[9], rate:1},
                 fall: {frames:[6,7], rate:1/3 }
               }],
