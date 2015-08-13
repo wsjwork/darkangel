@@ -31,16 +31,17 @@ var main = function(){
 
     T.scene("level1",new T.scene(function (stage){
 
-    }));
+    },{sort:true}));
     T.scene("level2",new T.scene(function (stage){
 
-    }));
+    },{sort:true}));
     //第一个参数加载资源，第二个参数设置sheet
     T.load([],
         function(){
 
+            window.setTimeout(function(){
+                T.stageScene("level1");
+            },300);
         }
-
     );
-
 };

@@ -1,0 +1,5 @@
+{ "player1":{"sx":0,"sy":0,"cols":16,"tw":72,"th":66,"frames":16},
+ "player2":{"sx":0,"sy":0,"cols":16,"tw":72,"th":66,"frames":16},
+  "foe1":{"sx":0,"sy":0,"cols":15,"tw":46,"th":34,"frames":15},
+   "foe2":{"sx":0,"sy":0,"cols":16,"tw":72,"th":66,"frames":16}}
+
